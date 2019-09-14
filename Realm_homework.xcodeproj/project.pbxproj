@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,15 @@
 		CE9BFEEB2327CDE7007A5220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9BFEE92327CDE7007A5220 /* Main.storyboard */; };
 		CE9BFEED2327CDE8007A5220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9BFEEC2327CDE8007A5220 /* Assets.xcassets */; };
 		CE9BFEF02327CDE8007A5220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9BFEEE2327CDE8007A5220 /* LaunchScreen.storyboard */; };
+		CEF5E0892327D5CE00134E04 /* IphoneListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E0882327D5CE00134E04 /* IphoneListTableViewController.swift */; };
+		CEF5E08F2327D7D800134E04 /* Phones.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E08E2327D7D800134E04 /* Phones.swift */; };
+		F750A9B9A191701D10243852 /* Pods_Realm_homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7518B340B5FB4E560933A2E5 /* Pods_Realm_homework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E02856B79701243C0A5A31 /* Pods-Realm_homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm_homework.release.xcconfig"; path = "Target Support Files/Pods-Realm_homework/Pods-Realm_homework.release.xcconfig"; sourceTree = "<group>"; };
+		524BC12846CDAD5E8B57517F /* Pods-Realm_homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm_homework.debug.xcconfig"; path = "Target Support Files/Pods-Realm_homework/Pods-Realm_homework.debug.xcconfig"; sourceTree = "<group>"; };
+		7518B340B5FB4E560933A2E5 /* Pods_Realm_homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BFEE22327CDE7007A5220 /* Realm_homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Realm_homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BFEE52327CDE7007A5220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9BFEE72327CDE7007A5220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		CE9BFEEC2327CDE8007A5220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9BFEEF2327CDE8007A5220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9BFEF12327CDE8007A5220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF5E0882327D5CE00134E04 /* IphoneListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IphoneListTableViewController.swift; sourceTree = "<group>"; };
+		CEF5E08E2327D7D800134E04 /* Phones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F750A9B9A191701D10243852 /* Pods_Realm_homework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A5A3A5356BEC046AA666B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7518B340B5FB4E560933A2E5 /* Pods_Realm_homework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45BD68B4D66252D6813343C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				524BC12846CDAD5E8B57517F /* Pods-Realm_homework.debug.xcconfig */,
+				02E02856B79701243C0A5A31 /* Pods-Realm_homework.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE9BFED92327CDE7007A5220 = {
 			isa = PBXGroup;
 			children = (
 				CE9BFEE42327CDE7007A5220 /* Realm_homework */,
 				CE9BFEE32327CDE7007A5220 /* Products */,
+				45BD68B4D66252D6813343C6 /* Pods */,
+				06A5A3A5356BEC046AA666B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +82,24 @@
 		CE9BFEE42327CDE7007A5220 /* Realm_homework */ = {
 			isa = PBXGroup;
 			children = (
+				CEF5E0902327D7DE00134E04 /* models */,
 				CE9BFEE52327CDE7007A5220 /* AppDelegate.swift */,
 				CE9BFEE72327CDE7007A5220 /* ViewController.swift */,
 				CE9BFEE92327CDE7007A5220 /* Main.storyboard */,
+				CEF5E0882327D5CE00134E04 /* IphoneListTableViewController.swift */,
 				CE9BFEEC2327CDE8007A5220 /* Assets.xcassets */,
 				CE9BFEEE2327CDE8007A5220 /* LaunchScreen.storyboard */,
 				CE9BFEF12327CDE8007A5220 /* Info.plist */,
 			);
 			path = Realm_homework;
+			sourceTree = "<group>";
+		};
+		CEF5E0902327D7DE00134E04 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E08E2327D7D800134E04 /* Phones.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9BFEF42327CDE8007A5220 /* Build configuration list for PBXNativeTarget "Realm_homework" */;
 			buildPhases = (
+				D1ED1F217EC598D8B588B3E6 /* [CP] Check Pods Manifest.lock */,
 				CE9BFEDE2327CDE7007A5220 /* Sources */,
 				CE9BFEDF2327CDE7007A5220 /* Frameworks */,
 				CE9BFEE02327CDE7007A5220 /* Resources */,
+				ABF5E8C9D9608E665B5D3492 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +170,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ABF5E8C9D9608E665B5D3492 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Realm_homework/Pods-Realm_homework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Realm_homework/Pods-Realm_homework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Realm_homework/Pods-Realm_homework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1ED1F217EC598D8B588B3E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Realm_homework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE9BFEDE2327CDE7007A5220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF5E08F2327D7D800134E04 /* Phones.swift in Sources */,
 				CE9BFEE82327CDE7007A5220 /* ViewController.swift in Sources */,
+				CEF5E0892327D5CE00134E04 /* IphoneListTableViewController.swift in Sources */,
 				CE9BFEE62327CDE7007A5220 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +364,7 @@
 		};
 		CE9BFEF52327CDE8007A5220 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524BC12846CDAD5E8B57517F /* Pods-Realm_homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +383,7 @@
 		};
 		CE9BFEF62327CDE8007A5220 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E02856B79701243C0A5A31 /* Pods-Realm_homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
